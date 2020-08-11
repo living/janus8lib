@@ -1,12 +1,13 @@
 const { Description } = require('./lib/mongoose/custom.types');
-const { configure } = require('./lib/mongoose/validation.messages');
+const { ProcessMessages } = require('./lib/mongoose/process.messages')
 
 const janus8lib = {
     customTypes: {
         mongoose: {
-            Description: Description
+            Description: Description,
         }
-    }
+    },
+    ProcessMessages: ProcessMessages
 }
 
 module['exports'] = janus8lib;
