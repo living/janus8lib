@@ -1,6 +1,6 @@
 const { Description, YesOrNo, Enum } = require('./lib/mongoose/custom.types');
 const { ProcessMessages } = require('./lib/mongoose/process.messages');
-const { Util } = require('./lib/util')
+const util = require('./lib/util')
 
 const janus8lib = {
     customTypes: {
@@ -11,7 +11,7 @@ const janus8lib = {
         }
     },
     ProcessMessages: ProcessMessages,
-    Util = Util
+    Util: util
 }
 
 module['exports'] = janus8lib;
