@@ -1,10 +1,10 @@
 {
   "name": "janus8lib",
-  "version": "1.0.23",
+  "version": "1.0.29",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R list"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/living/janus8lib/issues"
   },
-  "homepage": "https://github.com/living/janus8lib#readme"
+  "homepage": "https://github.com/living/janus8lib#readme",
+  "dependencies": {
+    "mongoose-validator-living": "^1.0.5",
+    "should": "^13.2.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1"
+  }
 }
