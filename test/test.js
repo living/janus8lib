@@ -7,7 +7,7 @@
     // ------------------------------------------------------------
     describe('Util:', () => {
         it('transformValues', done => {
-            root.Util.transformValues("sim", ["Sim","Não"]).should.equal("Sim");
+            root.Util.transformValues("sim/Teste", ["Sim","Não"]).should.equal("Sim");
             return done()
         })
     })
