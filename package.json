@@ -1,6 +1,6 @@
 {
   "name": "janus8lib",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/living/janus8lib#readme",
   "dependencies": {
-    "mongoose-validator-living": "^1.0.5",
+    "mongoose-validator-living": "^1.0.6",
     "should": "^13.2.3"
   },
   "devDependencies": {
