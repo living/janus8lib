@@ -24,8 +24,8 @@
             (val?val.getTime():undefined).should.equal(date.getTime());
 
             var val = root.Util.toDate('04-09-2020 00:00:00');
-            (val?val.getTime():undefined).should.equal(date.getTime());            
-
+            (val?val.getTime():undefined).should.equal(date.getTime());
+            
             return done()
         });
     })
