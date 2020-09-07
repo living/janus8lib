@@ -3,6 +3,7 @@
     const root = require('..');
     const should = require('should');
     const validator = require('validator');
+    const moment = require('moment');
   
     // Tests
     // ------------------------------------------------------------
@@ -15,15 +16,25 @@
             return done()
         });
         it('toDate:', done => {
-            var date = new Date('2020-09-04T00:00:00-03:00');
+            var date = new Date();
+            date.setHours(0);
+            date.setMinutes(0);
+            date.setSeconds(0);
+            date.setMilliseconds(0);
 
-            var val = root.Util.toDate('2020-09-04');
+            var t1 = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+
+            var val = root.Util.toDate(t1);
             (val?val.getTime():undefined).should.equal(date.getTime());
 
-            var val = root.Util.toDate('04-09-2020');
+            var t2 = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
+
+            var val = root.Util.toDate(t2);
             (val?val.getTime():undefined).should.equal(date.getTime());
 
-            var val = root.Util.toDate('04-09-2020 00:00:00');
+            var t3 = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear() + " 00:00:00";
+
+            var val = root.Util.toDate(t3);
             (val?val.getTime():undefined).should.equal(date.getTime());
             
             return done()
