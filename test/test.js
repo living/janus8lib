@@ -32,6 +32,11 @@
 
             var val = root.Util.toDate(t3);
             (val?val.getTime():undefined).should.equal(date.getTime());
+
+            var t3 = '8-9-2020 00:00';
+
+            var val = root.Util.toDate(t3);
+            (val?val.getTime():undefined).should.equal(date.getTime());
             
             return done()
         });
