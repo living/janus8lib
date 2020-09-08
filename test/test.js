@@ -16,23 +16,19 @@
             return done()
         });
         it('toDate:', done => {
-            var date = new Date();
-            date.setHours(0);
-            date.setMinutes(0);
-            date.setSeconds(0);
-            date.setMilliseconds(0);
+            var date = new Date('2020-09-08T00:00:00-03:00');
 
-            var t1 = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+            var t1 = '2020-09-08';
 
             var val = root.Util.toDate(t1);
             (val?val.getTime():undefined).should.equal(date.getTime());
 
-            var t2 = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
+            var t2 = '8-9-2020';
 
             var val = root.Util.toDate(t2);
             (val?val.getTime():undefined).should.equal(date.getTime());
 
-            var t3 = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear() + " 00:00:00";
+            var t3 = '8-9-2020 00:00:00';
 
             var val = root.Util.toDate(t3);
             (val?val.getTime():undefined).should.equal(date.getTime());
