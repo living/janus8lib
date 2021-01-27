@@ -37,6 +37,14 @@
 
             var val = root.Util.toDate(t3);
             (val?val.getTime():undefined).should.equal(date.getTime());
+
+            var t4 = '2020-9-8 00:00';
+
+            var val = root.Util.toDate(t4);
+            (val?val.getTime():undefined).should.equal(date.getTime());
+
+            var val = root.Util.toDate(new Date('2020-09-08 00:00'));
+            (val?val.getTime():undefined).should.equal(date.getTime());
             
             return done()
         });
