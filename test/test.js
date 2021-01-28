@@ -19,7 +19,7 @@
 
             var date = moment('2020-09-08T03:00:00-00:00', 'YYYY-MM-DDTHH:mm:ss.fffZ ZZ').toDate();
 
-            var val = date(root.Util.toDate('2020-09-08T03:00:00Z');
+            var val = root.Util.toDate('2020-09-08T03:00:00Z');
             (val?val.getTime():undefined).should.equal(date.getTime());
 
             var val = root.Util.toDate(new Date('2020-09-08 00:00'));
