@@ -16,7 +16,14 @@
             return done()
         });
         it('toDate:', done => {
-            var date = new Date('2020-09-08T00:00:00-03:00');
+
+            var date = moment('2020-09-08T03:00:00-00:00', 'YYYY-MM-DDTHH:mm:ss.fffZ ZZ').toDate();
+
+            var val = root.Util.toDate('2020-09-08T03:00:00Z');
+            (val?val.getTime():undefined).should.equal(date.getTime());
+
+            var val = root.Util.toDate(new Date('2020-09-08 00:00'));
+            (val?val.getTime():undefined).should.equal(date.getTime());
 
             var t1 = '2020-09-08';
 
@@ -43,10 +50,7 @@
             var val = root.Util.toDate(t4);
             (val?val.getTime():undefined).should.equal(date.getTime());
 
-            var val = root.Util.toDate(new Date('2020-09-08 00:00'));
-            (val?val.getTime():undefined).should.equal(date.getTime());
-            
-            return done()
+            return done();
         });
     })
 })()
