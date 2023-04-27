@@ -18,11 +18,11 @@
   "homepage": "https://github.com/living/janus8lib#readme",
   "dependencies": {
     "moment": "^2.27.0",
-    "mongoose-validator-living": "^1.0.6",
+    "mongoose-validator-living": "git+https://github.com/living/mongoose-validator-living.git#master",
     "should": "^13.2.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.1.1"
+    "mocha": "^10.2.0"
   }
 }
